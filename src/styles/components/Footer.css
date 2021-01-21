@@ -1,0 +1,105 @@
+footer{
+    background-color: #151825;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 30px 20px;
+}
+
+.Footer-contact{
+
+}
+
+h2{
+    font-size: 3rem;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.Footer-description{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.Footer-contactList--item{
+
+}
+
+.Footer-info{
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+summary{
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 6px;
+}
+
+summary:focus{
+    outline: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.summaryClosed::after {
+    content: "+";
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.summaryOpened::after{
+    content: "-";
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.Footer-info--item{
+    padding-bottom: 20px;
+}
+
+.Footer-info--item-title{
+    /* display: inline-block;
+    font-size: 1.8rem;
+    padding-bottom: 6px; */
+}
+
+.Footer-info--list{
+
+}
+
+.Footer-info--list-item{
+    padding: 2.5px 0;
+}
+
+.Footer-media{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.Footer-link{
+    color: white;
+    font-size: 4rem;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.Footer-link:hover{
+    color: #ff5a02;
+    transition: .3s;
+}
+
+.Footer-facebook-icon{
+    font-size: 4.4rem;
+}
+
+.Footer-instagram-icon{
+
+}

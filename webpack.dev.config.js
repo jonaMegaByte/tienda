@@ -36,12 +36,10 @@ module.exports = {
         test: /\.eot|svg|ttf|wof|jpg$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
-              limit: 0,
-              name: '[hash].[ext]',
-              outputPath: 'assets' // Donde pondremos los estaticos generados
-            },
+              outputPath: 'assets/'
+            }
           },
         ],
       }

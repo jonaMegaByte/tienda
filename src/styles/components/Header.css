@@ -1,0 +1,45 @@
+Header{
+    background-color: #ff5a02;
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.Header-logo{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 3rem;
+}
+
+/* .Header-input{
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    height: 45px;
+    margin: 0 auto;
+    padding-left: 20px;
+    width: 100%;
+} */
+
+.Header-input:focus{
+    outline: none;
+}
+
+.Header-input::placeholder{
+    color: white;
+}
+
+.header-menu{
+    background-color: #000000b5;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.7rem;
+    padding: 10px;
+    position: absolute;
+    right: 5px;
+    top: 25%;
+}
