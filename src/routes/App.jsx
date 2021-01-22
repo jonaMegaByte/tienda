@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
-import Layout from './Layout';
+import Layout from '../components/Layout';
 
 const App = () => (
   <BrowserRouter>
@@ -13,6 +13,6 @@ const App = () => (
       </Switch>
     </Layout>
   </BrowserRouter>
-)
+);
 
 export default App;

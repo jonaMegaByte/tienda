@@ -34,12 +34,43 @@ Header{
 }
 
 .header-menu{
-    background-color: #000000b5;
+    background-color: #151825c2;
     border-radius: 50%;
     color: white;
     font-size: 1.7rem;
     padding: 10px;
+}
+
+.Header-details{
     position: absolute;
     right: 5px;
     top: 25%;
+    width: 97%;
+}
+
+.Header-summary{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.Header-details-list{
+    background-color: #151825;
+    border-radius: 19px;
+    margin-top: -37px;
+    height: 141px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header-details-list--item{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    font-size: 1.5rem;
+    margin: 5px;
+    padding: 15px 0;
+    text-align: center;
+    width: 75%;
 }

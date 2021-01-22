@@ -40,11 +40,11 @@ module.exports = {
             options: {
               limit: 0,
               name: '[hash].[ext]',
-              outputPath: 'assets' // Donde pondremos los estaticos generados
+              outputPath: 'assets', // Donde pondremos los estaticos generados
             },
           },
         ],
-      }
+      },
     ],
   },
   plugins: [
