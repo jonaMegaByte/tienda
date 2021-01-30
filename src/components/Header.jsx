@@ -1,29 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import '../styles/components/Header.css';
 
-const Header = () => {
-  const handleIcon = event => {
-    if(event.target.localName === 'i'){
-      event.target.classList.toggle('icon-menu');
-      event.target.classList.toggle('icon-x');
-    }else if(event.target.localName === 'summary'){
-      event.target.firstChild.classList.toggle('icon-menu');
-      event.target.firstChild.classList.toggle('icon-x');
-    }
-  }
-  return(
-    <header>
+const Header = ({ cart }) => (
+  <header>
+    <Link to="/">
       <p className="Header-logo">Rustiic</p>
-      <details className="Header-details">
-        <summary className="Header-summary" onClick={handleIcon}>
-          <i className="icon-menu header-menu" />
-        </summary>
-        <ul className="Header-details-list">
-          <li className="Header-details-list--item">Carrito de compras</li>
-          <li className="Header-details-list--item">Iniciar sesión</li>
-        </ul>
-      </details>
-    </header>
-  )
-}
-export default Header;
+    </Link>
+    <Link to="/checkout" className="Header-link">
+      <i className="icon-shopping Header-link-icon" />
+      <p>{cart.length}</p>
+    </Link>
+  </header>
+);
+
+const mapStateToProps = (state) => ({
+  cart: state.cart,
+});
+
+export default connect(mapStateToProps, null)(Header);

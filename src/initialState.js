@@ -1,4 +1,6 @@
 export default {
+  cart: [
+  ],
   products: [
     {
       id: 1,
@@ -23,7 +25,8 @@ export default {
       ],
       title: 'Juego de hongos grande',
       price: 40000,
-      description: 'Juego de hongos rojos con mariposa a un costado, 35cm x 50cm',
+      description:
+        'Juego de hongos rojos con mariposa a un costado, 35cm x 50cm',
     },
     {
       id: 3,
@@ -83,7 +86,8 @@ export default {
       ],
       title: 'Elefante grande',
       price: 40000,
-      description: 'Elefante grande color gris con manta de colores dorados y plateados',
+      description:
+        'Elefante grande color gris con manta de colores dorados y plateados',
     },
     {
       id: 8,

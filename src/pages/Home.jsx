@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import ProductImages from '../components/ProductImages';
 
-import '../styles/components/Home.css'
+import '../styles/components/Home.css';
 
 const Home = ({ products }) => {
   return (

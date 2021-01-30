@@ -19,7 +19,7 @@ const Footer = () => {
       <div>
         <details className="Footer-info">
           <summary className="summaryClosed" onClick={handlePlus}>
-            <p>Servicio al cliente</p>
+            Servicio al cliente
           </summary>
           <ul className="Footer-info--list">
             <li className="Footer-info--list-item">Preguntas frecuentes</li>
