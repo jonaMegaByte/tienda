@@ -2,13 +2,13 @@ import React, { useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { AddNewClient } from '../actions';
+import { AddBuyer } from '../actions';
 
-const Register = ({ AddNewClient }) => {
+const Register = ({ AddBuyer }) => {
   const inputRef = useRef();
   const history = useHistory();
 
-  const handleSubmit = () => {
+  const handleSubmit = ({ buyer }) => {
     const formData = new FormData(inputRef.current);
     const values = {
       name: formData.get('name'),
@@ -19,13 +19,13 @@ const Register = ({ AddNewClient }) => {
       password: formData.get('password'),
       passwordConfirmation: formData.get('passwordConfirmation'),
     };
-    AddNewClient(values);
-    history.push('/login');
+    AddBuyer(values);
+    history.push('/checkout/payment');
   };
 
   return (
     <>
-      <h1>Registrate para poder realizar tu compra</h1>
+      <h1>Ingresa tus datos para poder realizar tu compra</h1>
       <div className="Register-container">
         <form ref={inputRef} onSubmit={handleSubmit}>
           <label>
@@ -86,7 +86,7 @@ const Register = ({ AddNewClient }) => {
               required
             />
           </label>
-          <button type="submit">Registrarse</button>
+          <button type="submit">Proceder con el pago</button>
         </form>
       </div>
     </>
@@ -94,7 +94,11 @@ const Register = ({ AddNewClient }) => {
 };
 
 const mapDispatchToProps = {
-  AddNewClient,
+  AddBuyer,
 };
 
-export default connect(null, mapDispatchToProps)(Register);
+const mapStateToProps = (state) => ({
+  buyer: state.buyer,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

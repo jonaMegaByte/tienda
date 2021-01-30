@@ -1,6 +1,6 @@
 export default {
-  cart: [
-  ],
+  buyer: [],
+  cart: [],
   products: [
     {
       id: 1,
@@ -126,4 +126,5 @@ export default {
       description: 'Juego de 3 patos blancos con pico anaranjado',
     },
   ],
+  shopping: []
 };
