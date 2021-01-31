@@ -6,6 +6,8 @@ import {PayPalButton} from 'react-paypal-button';
 import getTotal from '../utils/getTotal';
 import { CleanCart, AddShopping } from '../actions';
 
+import '../styles/components/Payment.css';
+
 const Payment = ({ cart, buyer, CleanCart, AddShopping }) => {
   const history = useHistory();
 
@@ -37,12 +39,8 @@ const Payment = ({ cart, buyer, CleanCart, AddShopping }) => {
       {cart.length > 0 ? (
         <div>
           <h1>Escoge un metodo de págo para realizar tu compra</h1>
-          <h2>
-            El total de la compra es:
-            {getTotal(cart.map((product) => product.price))}
-          </h2>
-          <div>
-            <PayPalButton 
+          <div className="PayPalButton-container">
+            <PayPalButton
               paypalOptions={options}
               buttonStyles={buttonStyles}
               amount={getTotal(cart.map((product) => product.price))}

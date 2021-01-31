@@ -6,8 +6,8 @@ import '../styles/components/Header.css';
 
 const Header = ({ cart }) => (
   <header>
-    <Link to="/">
-      <p className="Header-logo">Rustiic</p>
+    <Link to="/" className="Header-logo">
+      <p>Rustiic</p>
     </Link>
     <Link to="/checkout" className="Header-link">
       <i className="icon-shopping Header-link-icon" />

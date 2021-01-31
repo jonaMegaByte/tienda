@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 
 import { AddBuyer } from '../actions';
 
+import '../styles/components/Register.css';
+
 const Register = ({ AddBuyer }) => {
   const inputRef = useRef();
   const history = useHistory();
@@ -29,11 +31,11 @@ const Register = ({ AddBuyer }) => {
       <div className="Register-container">
         <form ref={inputRef} onSubmit={handleSubmit}>
           <label>
-            <p>Nombre:</p>
+            <p className="form-label-description">Nombre:</p>
             <input type="text" placeholder="Nombre..." name="name" required />
           </label>
           <label>
-            <p>Apellidos:</p>
+            <p className="form-label-description">Apellidos:</p>
             <input
               type="text"
               placeholder="Apellidos..."
@@ -42,7 +44,7 @@ const Register = ({ AddBuyer }) => {
             />
           </label>
           <label>
-            <p>Teléfono:</p>
+            <p className="form-label-description">Teléfono:</p>
             <input
               type="number"
               placeholder="Teléfono..."
@@ -51,7 +53,7 @@ const Register = ({ AddBuyer }) => {
             />
           </label>
           <label>
-            <p>Dirección:</p>
+            <p className="form-label-description">Dirección:</p>
             <input
               type="text"
               placeholder="Dirección..."
@@ -60,7 +62,7 @@ const Register = ({ AddBuyer }) => {
             />
           </label>
           <label>
-            <p>Correo electronico:</p>
+            <p className="form-label-description">Correo electronico:</p>
             <input
               type="email"
               placeholder="Correo electronico..."
@@ -68,25 +70,7 @@ const Register = ({ AddBuyer }) => {
               required
             />
           </label>
-          <label>
-            <p>Contraseña:</p>
-            <input
-              type="password"
-              placeholder="Contraseña..."
-              name="password"
-              required
-            />
-          </label>
-          <label>
-            <p>Confirmar contraseña:</p>
-            <input
-              type="password"
-              placeholder="Contraseña..."
-              name="passwordConfirmation"
-              required
-            />
-          </label>
-          <button type="submit">Proceder con el pago</button>
+          <button type="submit" className="form-button">Proceder con el pago</button>
         </form>
       </div>
     </>

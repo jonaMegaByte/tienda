@@ -1,0 +1,41 @@
+.Checkout-container{
+    margin: 0 auto;
+    min-width: 300px;
+    width: 90%;
+}
+
+.Checkout-productsList{
+    border-bottom: 2px solid black;
+    padding: 0 20px;
+}
+
+.Checkout-productList-item{
+    border-top: 1px solid #8080809c;
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: space-between;
+    padding: 5px 0 15px;
+}
+
+.Checkout-link{
+    color: #000000a8;
+}
+
+.Checkout-confirm--button{
+    background-color: #ff5a02;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    margin: 15px auto;
+    padding: 10px 20px;
+}
+
+.Checkout-total{
+    font-size: 1.5rem;
+    padding: 5px;
+    text-align: right;
+}

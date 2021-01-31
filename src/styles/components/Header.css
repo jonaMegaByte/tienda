@@ -9,8 +9,10 @@ Header{
 }
 
 .Header-logo{
+    color: white;
     font-family: 'Abril Fatface', cursive;
     font-size: 3rem;
+    text-decoration: none;
 }
 
 .Header-link{

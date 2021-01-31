@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import getTotal from '../utils/getTotal';
 import { RemoveFromCart } from '../actions';
 
+import '../styles/components/Checkout.css';
+
 const Checkout = ({ cart, RemoveFromCart }) => {
   const history = useHistory();
 
@@ -20,28 +22,26 @@ const Checkout = ({ cart, RemoveFromCart }) => {
   return (
     <>
       {cart.length > 0 ? (
-        <div>
+        <div className="Checkout-container">
           <h1>Revisa y confirma tu orden</h1>
           <ul className="Checkout-productsList">
             {cart.map((product) => (
-              <li key={cart.indexOf(product)}>
-                <span>{product.title}</span>
-                <span>{product.price}</span>
-                <button
+              <li key={cart.indexOf(product)} className="Checkout-productList-item">
+                <span className="Checkout-productList-title">{`${product.title}: ${product.price}`}</span>
+                <i
                   type="button"
                   onClick={() => handleRemoveFromCart(product.id)}
-                >
-                  Borrar
-                </button>
+                  className="icon-x Checkout-productList-delete"
+                 />
               </li>
             ))}
           </ul>
           <h3 className="Checkout-total">
-            {getTotal(cart.map((product) => product.price))}
+            {`Total a pagar: ₡${getTotal(cart.map((product) => product.price))}`}
           </h3>
           <button
             type="button"
-            className="Checkout-confirm"
+            className="Checkout-confirm--button"
             onClick={() => {
               history.push('/checkout/register');
             }}
@@ -51,10 +51,14 @@ const Checkout = ({ cart, RemoveFromCart }) => {
         </div>
       ) : (
         <div>
-          <h1>Aun no has agregado ningun producto al carrito</h1>
-          <Link to="/">
-            <h2>Regresar a comprar</h2>
-          </Link>
+          <h1>
+            Aun no has agregado ningun producto al carrito.
+            <span>
+              <Link to="/" className="Checkout-link">
+                <h2>Regresar a comprar</h2>
+              </Link>
+            </span>
+          </h1>
         </div>
       )}
     </>
